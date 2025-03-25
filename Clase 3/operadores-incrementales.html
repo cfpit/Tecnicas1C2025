@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //operadores incrementales: son simbolos q permiten incrementar o decrementar el valor de una variable
+        //incremento unitario: ++
+        //decremento unitario: --
+        
+        var n = 1;
+        document.write('El valor de n es = ' + n + '<br>');
+
+        n++;
+        document.write('El valor de n es = ' + n + '<br>');
+
+        n += 1;
+        document.write('El valor de n es = ' + n + '<br>');
+
+        n = n + 1;
+        document.write('El valor de n es = ' + n + '<br>');
+
+        n--;
+        document.write('El valor de n es = ' + n + '<br>');
+
+        n += 5;// n = n + 5
+        document.write('El valor de n es = ' + n + '<br>');
+
+        n *= 4;// n = n * 4
+        document.write('El valor de n es = ' + n + '<br>');
+
+        n /= 2;// n = n / 2
+        document.write('El valor de n es = ' + n + '<br>');
+
+        n %= 2;// n = n % 2
+        document.write('El valor de n es = ' + n + '<br>');
+        
+        //post-incremento: primero se usa(por ej.: se muestra en pantalla) el valor de la variable y luego se incrementa
+        var x = 10;
+        document.write('El valor de x es = ' + x + '<br>');//x = 10
+        document.write('El valor de x es = ' + x++ + '<br>');// x = 10
+        document.write('El valor de x es = ' + x + '<br>');// x = 11
+
+        //pre-incremento: primero se incrementa el valor de la variable y luego se usa(por ej.: se muestra en pantalla)
+        var y = 20;
+        document.write('El valor de y es = ' + y + '<br>');//y = 20
+        document.write('El valor de y es = ' + ++y + '<br>');// y = 21
+        
+    </script>
+</body>
+</html>

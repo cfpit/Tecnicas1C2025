@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //constantes: son datos q no pueden cambiar su valor
+        //se declaran con la palabra reservada const
+        const PI = 3.1416;//constante de tipo float
+        const IVA = 0.21;//constante de tipo float
+
+        //Ejemplo: calcular el precio final de un producto
+        var precio = 1000;
+        var precioFinal = precio + (precio * IVA);
+        document.write('El precio final del producto es de $ ' + precioFinal);
+        document.write('El precio final del producto es de $ ' + precioFinal.toFixed(2));
+    </script>
+</body>
+</html>

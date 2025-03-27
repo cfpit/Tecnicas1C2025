@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //operadores relacionales
+        var a = 5;       
+        var b = 10;
+        var c = "5";    
+        var d = 5;
+        var e = "hola";
+        var f = "Hola";
+        var g = "hola mundo";
+        var h = "hola mundo";
+        
+        // operador >
+        document.write(a > b); // false
+        document.write("<br>");    
+
+        // operador <
+        document.write(a < b); // true
+        document.write("<br>");
+
+        // operador <=
+        document.write(a <= b); // true
+        document.write("<br>");
+
+        // operador >=
+        document.write(a >= b); // false
+        document.write("<br>");
+        
+        // operador =
+        document.write(a == b); // false
+        document.write("<br>");
+
+        // operador !=
+        document.write(a != b); // true
+        document.write("<br>");
+
+        // operador ===
+        document.write(a === d); // 5 === 5 -> true
+        document.write("<br>");
+        
+        document.write(a === c); // 5 === "5" -> false
+        document.write("<br>");
+
+        //inferencia de tipo de dato
+        var n = 10;
+        document.write("n = " + n + "<br>"); // 10
+
+        n = "Juan";
+        document.write("n = " + n + "<br>"); // Juan
+
+        //operador ternario
+        var edad = 10;
+        var resultado = (edad >= 18) ? "Eres mayor de edad" : "Eres menor de edad";
+        document.write(resultado);
+    
+    </script>
+</body>
+</html>

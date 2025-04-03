@@ -8,21 +8,33 @@
     <style>
         /* selector de id*/
         #colorFuente {
-            color: red;
+            color: cyan;
+            font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+        }
+
+        /* selector de etiqueta*/
+        a {
+            text-decoration: none;
+        }
+
+        /* selector de clase*/
+        .colorTexto {
+            color: yellow;
         }
     </style>
+    <link rel="stylesheet" href="estilos.css">
 </head>
 
 <body style="background:bisque;">
     <h1 id="colorFuente">Esto es un titulo</h1>
 
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid ipsa, amet quae inventore possimus quas odio
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid ipsa, amet quae <span class="colorTexto">dklfbdfbnkfbkjg</span> inventore possimus quas odio
         dolorum cupiditate nemo vitae eveniet quisquam nulla modi similique labore eligendi ex. Commodi, necessitatibus.
     </p>
 
     <br><br>
 
-    <h3>Enlaces</h3>
+    <h3 class="colorTexto">Enlaces</h3>
     <h4>Vinculo Absoluto</h4>
     <!-- sale fuera de mi propio sitio web -->
     <a href="https://www.google.com">Ir a Google</a>

@@ -1,0 +1,1 @@
+document.write("Hola Javascript desde archivo de script externo");

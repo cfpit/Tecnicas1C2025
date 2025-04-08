@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body onload="alert('Hola Javascript en linea')">
+    <h1>Hola Mundo!</h1>
+    <script>
+        document.write("Hola Argentina!<br>");
+        document.write("<p style='color:red'>Hola CABA!</p>");
+
+        var edad = 25;
+        const nombre = 'Juan';//const nombre = "Juan";
+        var casado = false;//valor alternativo: true
+        var promedio = 8.5;
+
+        edad ++; //incrementa en 1 la variable edad
+
+        document.write("Hola " + nombre + " tenes " + edad + " años<br>");
+        document.write("Tu promedio es " + promedio + "<br>");
+
+        var n1 = 10;
+        var n2 = 5;
+
+        //operadores aritméticos
+        console.log(n1 + n2);//15
+        console.log(n1 - n2);//5
+        console.log(n1 * n2);//50
+        console.log(n1 / n2);//2
+        console.log(n1 % n2);//modulo o resto de la division -> 0
+
+        //operadores de relacion
+        console.log(n1 == n2);//false
+        console.log(n1 != n2);//true
+        console.log(n1 > n2);//true
+        console.log(n1 < n2);//false
+
+        //operador ternario. Informar si Juan es mayor de edad
+        var mensaje = (edad >= 18) ? "Eres mayor de edad" : "Eres menor de edad";
+        document.write(mensaje + "<br>");
+
+
+    </script>
+    <script src="js/archivo.js"></script>
+</body>
+</html>

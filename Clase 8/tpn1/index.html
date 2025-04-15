@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>TPN1 Estructuras Condicionales</h1>
+
+    <form action="javascript:calcular()" method="post">
+        <label for="lapices">Cantidad de Lapices: </label>
+        <input type="number" id="lapices" name="lapices" value="0" min="0" max="10000"><br><br>
+        
+        <input type="submit" value="Calcular">
+    </form>
+    <br>
+    <div id="resultado" style="color: red;"></div>
+
+    <script>
+        //document.write("<h2>Ejercicio 2</h2>");
+        //ingreso de datos x teclado
+        //la funcion prompt permite ingresar datos por teclado
+        //la funcion parseInt convierte un string(o sea lo ingresado x teclado) a un entero
+        /*
+        var n1 = parseInt(prompt("Ingrese n1: "));
+        var n2 = parseInt(prompt("Ingrese n2: "));
+        var n3 = parseInt(prompt("Ingrese n3: "));
+
+        //logica de decision
+        if (n1 > n2 && n1 > n3) {
+            document.write("n1 es el mayor y vale: " + n1);
+        } 
+        if (n2 > n1 && n2 > n3) {
+            document.write("n2 es el mayor y vale: " + n2);
+        } 
+        if (n3 > n1 && n3 > n2) {
+            document.write("n3 es el mayor y vale: " + n3);
+        }
+        */
+
+        /*
+        document.write("<h2>Ejercicio 2 bis</h2>");
+            
+        var n1 = parseInt(prompt("Ingrese n1: "));
+        var n2 = parseInt(prompt("Ingrese n2: "));
+        var n3 = parseInt(prompt("Ingrese n3: "));
+    
+        if (n1>n2) 
+        {
+            if (n1>n3) 
+            {
+                document.write("n1 es el mayor",'<br>');
+            }
+            else
+            {
+                document.write("n3 es el mayor",'<br>');
+            }
+        } 
+        else 
+        {
+            if (n2>n3) 
+            {
+                document.write("n2 es el mayor",'<br>');
+            } 
+            else 
+            {
+                document.write("n3 es el mayor",'<br>');
+            }
+        }
+    
+        */
+
+        document.write("<h2>Ejercicio 5</h2>");
+        function calcular(){
+            //capturo el valor del campo de texto de cantidad de lapices
+            var cantidad = document.getElementById("lapices").value;
+            //var cantidad = document.querySelector("#lapices").value;
+            
+            //capturo el div para mostrar el precio de los lapices
+            var mensaje = document.getElementById("resultado");
+            //var mensaje = document.querySelector("#resultado");
+
+            if(cantidad >= 1000){
+                //innerHTML permite escribir contenido en un elemento html
+                mensaje.innerHTML = "El precio de los lapices es: " + (cantidad * 0.85) + " $";
+            } else{
+                mensaje.innerHTML = "El precio de los lapices es: " + (cantidad * 0.9) + " $";
+            }
+
+        }
+
+    </script>
+</body>
+
+</html>

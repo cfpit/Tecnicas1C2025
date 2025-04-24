@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- formulario de login con campos usuario y clave -->
+    <form action="javascript:login()" method="post">
+        Nombre: 
+        <input type="text" id="usuario">
+        <br>
+        <label for="clave" style="margin-right:1em">Clave:</label>
+        <input type="password" id="clave">
+        <br>
+        <button type="submit">Enviar</button>
+    </form>
+    <br>
+    <div id="mensaje" style="color: red"></div>
+    <script>
+        function login() {
+            // capturo el valor del input de usuario y clave y lo guardo en las variables usuario y clave
+            const usuario = document.querySelector('#usuario').value;
+            const clave = document.querySelector('#clave').value;
+            // capturo el div donde voy a mostrar el mensaje y lo guardo en la variable caja 
+            const caja = document.querySelector('#mensaje');
+            
+            // logica de negocio para validar el usuario y la clave
+            if (usuario == 'pepito' && clave == '1234') {
+                caja.innerHTML = 'Bienvenido Pepito!';
+            }
+            if (usuario == 'pepito' && clave != '1234') {
+                caja.innerHTML = 'Contraseña Incorrecta!';
+            }
+            if (usuario != 'pepito' && clave == '1234') {
+                caja.innerHTML = 'Usuario Incorrecto!';
+            }    
+        }
+    </script>
+</body>
+</html>

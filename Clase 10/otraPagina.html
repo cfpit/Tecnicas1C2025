@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1></h1>
+    <script>
+        //capturo el contenido del localStorage y lo guardo en la variable msj
+        var msj = localStorage.getItem('delivery');
+        //capturo el h1 y lo guardo en la variable titulo
+        var titulo = document.querySelector('h1');
+        //muestro el mensaje en el h1
+        titulo.innerHTML = msj;
+    </script>
+</body>
+</html>

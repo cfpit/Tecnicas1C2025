@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="javascript:saludar()" method="post">
+        <input type="text" id="nombre" name="nombre" placeholder="Ingrese su Nombre Aqui" required>
+        <br>
+        <button type="submit">Enviar</button>
+    </form>
+    <br>
+    <div id="mensaje" style="color: red; border: 1px blue solid; width:30%"></div>
+    <script>
+        function saludar() {
+            // capturo el valor del input de nombre y lo guardo en la variable llamada nombre
+            const nombre = document.querySelector('#nombre').value;
+            // capturo el div donde voy a mostrar el mensaje y lo guardo en la variable caja 
+            const caja = document.querySelector('#mensaje');
+
+            // muestro el saludo en el div
+            switch (nombre) {
+                case 'Juan':
+                    mensaje = 'Como estas Juancito!';
+                    break;
+                case 'Maria':
+                    mensaje = 'Que tal Mary!';
+                    break;
+                case 'Jose':
+                    mensaje = 'Que contas Pepe!';
+                    break;
+                default:
+                    mensaje = 'Hola '+ nombre + ' como estas?';
+                    break;
+            }
+
+            // muestro el mensaje en el div
+            //caja.innerHTML = mensaje;
+
+            // pasaje de valores entre paginas
+            // guardo el mensaje en el localStorage
+            localStorage.setItem('delivery', mensaje);
+            // redirecciono a otra pagina
+            window.location.href = 'otraPagina.html';
+
+        }
+    </script>
+</body>
+</html>

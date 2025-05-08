@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //Ejercicio 1: Crear un programa que imprima los números del 1 al 10 excepto el 2, 5 y 9 utilizando un bucle for.
+       /*
+        for (let cont = 1; cont <= 10; cont++) {
+            if (cont == 2 || cont == 5 || cont == 9) {
+                continue;
+            }
+            document.write("contador: " + cont + "<br>");
+        }
+        */
+        
+        /*
+        for (let cont = 1; cont <= 10; cont++) {
+            if (cont != 2 && cont != 5 && cont != 9) {
+                document.write("contador: " + cont + "<br>");    
+            }
+        }
+        */
+
+        //Ejercicio 2: Desarrollar un programa que permita ingresar cinco valores de temperatura. Informar la temperatura más alta y la más baja ingresada.
+
+        var temperatura = 0;
+        var temperaturaMax = -Infinity;
+        var temperaturaMin = Infinity;
+        for (let cont = 1; cont <= 5; cont++) {
+            temperatura = parseFloat(prompt("Ingrese la temperatura: "));
+            if (temperatura > temperaturaMax) {
+                temperaturaMax = temperatura;
+            }
+            if (temperatura < temperaturaMin) {
+                temperaturaMin = temperatura;
+            }
+        }
+        document.write("Temperatura máxima: " + temperaturaMax + "<br>");
+        document.write("Temperatura mínima: " + temperaturaMin + "<br>");
+        
+    </script>    
+</body>
+</html>

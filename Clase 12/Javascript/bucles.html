@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /*
+        //while
+        document.write("inicio<br>");
+        var cont = 1;
+        while (cont <= 5) {
+            document.write("contador: " + cont + "<br>");
+            cont++;
+        }
+        document.write("fin");
+        */
+
+        // do while
+        /*
+        var cont = 1;
+        do {
+            document.write("contador: " + cont + "<br>");
+            cont++;
+        } while (cont <= 5);
+         */
+
+         //for
+         /*
+        for (let cont = 1; cont <= 10; cont++) {
+            document.write("contador: " + cont + "<br>");
+        }
+
+        document.write("ultimo valor del contador: " + cont + "<br>");
+        */
+
+
+        for (let cont = 1; cont <= 5; cont++) {
+            document.write("contador antes: " + cont + "<br>");
+            if (cont == 2) continue;
+            if (cont == 3) break;
+            document.write("contador despues: " + cont + "<br>");
+        }
+
+        /*
+            contador antes: 1
+            contador despues: 1
+            contador antes: 2
+            contador antes: 3
+        */
+    </script>
+</body>
+</html>

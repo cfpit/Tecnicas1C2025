@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <h2>Ejercicio 8</h2>
+    <!-- Crear un programa que permita al usuario ingresar números dentro de un formulario hasta que sea cero. Luego informar el promedio de los números ingresados mediante una funcion de Javascript. -->
+    <form action="javascript:calcularPromedio()">
+        <label for="numero">Ingrese un número (0 para terminar):</label>
+        <input type="number" id="numero" name="numero" required><br><br>
+        <input type="submit" value="Enviar">
+    </form>
+    <div id="resultado" style="color:green"></div>
+    <div id="mensaje" style="color:red"></div>
+
+
+
+    <script>
+        //Ejercicio3: Crear un programa que permita al usuario ingresar números hasta que sea cero. Luego informar el promedio de los números ingresados. Se debe hacer con while
+        //1ra forma: salida por condicion de corte
+        /*
+        let suma = 0;
+        let contador = 0;
+        let numero;
+        numero = parseInt(prompt("Ingrese un número (0 para terminar):"));
+        while (numero !== 0) {
+            
+            suma += numero;// suma = suma + numero
+            contador++;
+
+            numero = parseInt(prompt("Ingrese un número (0 para terminar):"));
+        }
+        if (contador > 0) {
+            let promedio = suma / contador;
+            document.write("El promedio de los números ingresados es: " + promedio);
+        } else {
+            document.write("No se ingresaron números.");
+        } 
+        */
+
+
+
+        //2da forma: salida por break
+        /*
+        let suma = 0;
+        let contador = 0;
+        let numero;
+        numero = parseInt(prompt("Ingrese un número (0 para terminar):"));
+        while (true) {
+            if (numero === 0) {
+                break; // Salir del bucle si el número es cero
+            }
+            suma += numero;// suma = suma + numero
+            contador++;
+
+            numero = parseInt(prompt("Ingrese un número (0 para terminar):"));
+        }
+        if (contador > 0) {
+            document.write("El promedio de los números ingresados es: " + suma / contador);
+        } else {
+            document.write("No se ingresaron números.");
+        }
+        */
+
+        //3ra forma: salida por cambio de estado de un flag o bandera
+        /*
+        let suma = 0;
+        let contador = 0;
+        let numero;
+        let bandera = false; // Inicializar la bandera como falsa
+        do {
+            numero = parseInt(prompt("Ingrese un número (0 para terminar):"));
+
+            if (numero === 0) {
+                bandera = true; // Salir del bucle si cambia el estado de la bandera
+            }
+            else {
+                suma += numero;
+                contador++;
+            }
+        } while (!bandera);
+
+
+        if (contador > 0) {
+            document.write("El promedio de los números ingresados es: " + (suma / contador));
+        } else {
+            document.write("No se ingresaron números.");
+        }
+        */
+
+        //Ejercicio 8: Crear un programa que permita al usuario ingresar números dentro de un formulario hasta que sea cero. Luego informar el promedio de los números ingresados mediante una funcion de Javascript.
+        let suma = 0;
+        let contador = 0;
+
+        function calcularPromedio() {
+
+            //let numero = parseInt(document.getElementById("numero").value);
+            let numero = parseInt(document.querySelector("#numero").value);
+
+            if (numero !== 0) {
+                suma += numero;
+                contador++;
+                document.querySelector("#numero").value = ""; // Limpiar campo de entrada
+                document.querySelector("#numero").focus(); // foco en campo de entrada
+            }
+            else {
+                if (contador > 0) {
+                    let promedio = suma / contador;
+                    document.getElementById("resultado").innerText = "El promedio de los números ingresados es: " + promedio;
+                } else {
+                    document.getElementById("mensaje").innerText = "No se ingresaron números.";
+                }
+            }
+        }
+
+    </script>
+</body>
+
+</html>

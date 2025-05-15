@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- Crear un programa que permita ingresar la clave del home banking. Si se fallan 3 veces, se bloquea el acceso. La clave es "1234". Informar si se logró ingresar la clave correctamente o si se bloqueó el acceso. Avisar al usuario cuántas veces falló y cuantas oportunidades le quedan. -->
+    <form action="javascript:login();">
+        <label for="clave">Ingrese la clave:</label>
+        <input type="password" id="clave" name="clave" required><br>
+        <button type="submit">Enviar</button>
+    </form>
+    <br>
+    <div id="mensaje"></div>
+
+    <script>
+        var intentos = 0;
+
+        function login() {
+            const claveIngresada = document.getElementById("clave").value;
+            //const mensajeDiv = document.getElementById("mensaje");
+            const mensajeDiv = document.querySelector("#mensaje");
+
+            if (claveIngresada === "1234") {
+                mensajeDiv.innerHTML = "Bienvenido!!";
+                mensajeDiv.style.color = "green";
+
+                document.getElementById("clave").style.display = 'none';
+                document.querySelector("button").style.display = 'none';
+                document.querySelector("label").style.display = 'none';
+
+                mensajeDiv.style.fontSize = "20px";
+                mensajeDiv.style.fontWeight = "bold";
+                mensajeDiv.style.textAlign = "center";
+                mensajeDiv.style.marginTop = "20px";
+                mensajeDiv.style.backgroundColor = "lightgreen";
+                mensajeDiv.style.padding = "10px";
+                mensajeDiv.style.borderRadius = "20px";
+                mensajeDiv.style.border = "2px solid blue";
+                mensajeDiv.style.width = "300px";
+                mensajeDiv.style.margin = "0 auto";
+
+                document.querySelector("body").style.backgroundColor = 'lightblue';
+                
+            }
+            else {
+
+                intentos ++;
+                
+                if (intentos == 3) {
+                    mensajeDiv.innerHTML = "Acceso bloqueado.";
+                    mensajeDiv.style.color = "red";
+                    // Deshabilitar el campo de entrada
+                    document.getElementById("clave").disabled = true;
+                }
+                else{
+                    mensajeDiv.innerHTML = "Clave incorrecta. Chances Restantes: " + (3 - intentos);
+                    mensajeDiv.style.color = "red";
+                    document.getElementById("clave").value = "";
+                    document.getElementById("clave").focus();
+                }
+            }
+        }
+
+                
+            
+    </script>
+
+
+</body>
+
+</html>

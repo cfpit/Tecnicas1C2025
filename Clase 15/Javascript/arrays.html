@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //defino un array de edades
+        let edades = [25, 30, 45, 20, 35];
+        console.log(edades);//muestra el array completo en la consola
+        console.log(edades[3]);//20
+        document.write(edades[3] + "<br>"); //20
+        document.write(edades);// muestra el array completo en el html
+
+        //modifico el valor de la posicion 3
+        edades[3] = 21;
+        console.log(edades[3]);//21
+        document.write(edades[3] + "<br>"); //21
+
+        //agrego un nuevo valor al array
+        edades[5] = 50;
+        console.log(edades[5]);//50
+        document.write(edades[5] + "<br>"); //50
+
+        //recorro el array con un for
+        for(let i = 0; i < edades.length; i ++){
+            document.write("Indice: "+ i + " Valor: " + edades[i] + "<br>");
+        }
+
+        document.write('<hr>');
+
+        //recorro el array para obtener el promedio de edad,
+        //el mayor y el menor
+        let total = 0;
+        let max = edades[0];
+        let min = edades[0];
+		
+        for(let i = 0; i < edades.length; i ++){
+		
+            total += edades[i];
+
+            if(edades[i] > max){
+                max = edades[i];
+            }
+            if(edades[i] < min){
+                min = edades[i];
+            }
+        }
+
+        let promedio = total / edades.length;
+        document.write("El promedio de edad es: " + promedio + "<br>");
+        document.write("La edad mayor es: " + max + "<br>");
+        document.write("La edad menor es: " + min + "<br>");
+        document.write('<hr>');
+
+    </script>    
+</body>
+</html>

@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //defino un array de frutas
+        const frutas = ["manzana", "banana", "naranja", "kiwi", "mango"];
+        //agrego un elemento en el medio del array con splice
+        //splice(indice, cantidad a eliminar, elemento a agregar)
+        frutas.splice(2, 0, "pera");
+        //muestro el array
+        document.write(frutas + "<br>");
+
+
+        //agrego un elemento al final del array con push
+        //push(elemento)
+        frutas.push("sandia");
+        //muestro el array
+        document.write(frutas + "<br>");
+
+
+        //agrego un elemento al principio del array con unshift
+        //unshift(elemento)
+        frutas.unshift("uva");
+        //muestro el array
+        document.write(frutas + "<br>");
+
+
+        //elimino el primer elemento del array con shift
+        //shift()
+        frutas.shift();
+        //muestro el array
+        document.write(frutas + "<br>");
+
+
+        //elimino el ultimo elemento del array con pop
+        //pop()
+        frutas.pop();
+        //muestro el array
+        document.write(frutas + "<br>");
+
+
+        //elimino un elemento del medio del array con splice
+        //splice(indice, cantidad a eliminar)
+        frutas.splice(2, 1);
+        //muestro el array
+        document.write(frutas + "<br>");
+
+
+        //busco un elemento en el array con indexOf
+        //indexOf(elemento)
+        //si el elemento no existe devuelve -1
+        //si el elemento existe devuelve el indice
+        //busco un elemento que existe con indexOf
+        const indice = frutas.indexOf("banana");
+        //muestro el indice
+        document.write(indice + "<br>"); // 1
+
+
+        //busco un elemento que no existe con indexOf
+        const indice2 = frutas.indexOf("limon");
+        //muestro el indice
+        document.write(indice2 + "<br>");// -1
+
+        //ordeno el array en forma ascendente con sort
+        //sort()
+        frutas.sort();
+        //muestro el array
+        document.write(frutas + "<br>");
+
+        //ordeno el array en forma descendente con reverse
+        //reverse()
+        frutas.reverse();
+        //muestro el array
+        document.write(frutas + "<br>");
+
+
+        document.write("<hr>");
+
+        //recorro el array con for
+        for (let i = 0; i < frutas.length; i++) {
+            document.write(frutas[i] + "<br>");
+        }
+
+        document.write("<hr>");
+
+        //recorro el array con forEach
+        //forEach(function(elemento, indice, array){})
+        frutas.forEach(function (elemento, indice, array) {
+            document.write(elemento + "<br>");
+        });
+
+        document.write("<hr>");
+
+        const precios = [100, 200, 300, 400, 500];
+        //recorro el array con forEach y obtengo el IVA de cada precio
+        //forEach no devuelve valores, solo los muestra
+        precios.forEach(function (elemento, indice, array) {
+            document.write(elemento * 1.21 + "<br>");
+        });
+
+        //recorro el array con map
+        //map(function(elemento, indice, array){})
+        //map devuelve un nuevo array con los valores modificados
+        const preciosConIva = precios.map(function (elemento, indice, array) {
+            return elemento * 1.21;
+        });
+        //muestro el nuevo array
+        document.write(preciosConIva + "<br>");
+
+        document.write("<hr>");
+
+        //recorro el array con for in
+        //for in solo sirve para recorrer objetos
+        //no sirve para recorrer arrays -> devuelve los indices
+        //for in (let i in array){}
+        for(let indice3 in frutas) {
+            document.write(indice3 + "<br>");
+        }
+
+        document.write("<hr>");
+
+        //recorro el array con for of
+        //for of (let elemento of array){}
+        //for of sirve para recorrer arrays y devuelve los elementos
+        //for of (let i of array){}
+        for(let elemento of frutas) {
+            document.write(elemento + "<br>");
+        }
+
+        document.write("<hr>");
+
+        //recorro el array con reduce
+        //reduce(function(acumulador, elemento, indice, array){})
+        //reduce devuelve un solo valor
+        //reduce(function(acumulador, elemento, indice, array){}, valor inicial)
+        //reduce(function(acumulador, elemento, indice, array){}, 0)
+        const suma = precios.reduce(function (acumulador, elemento, indice, array) {
+            return acumulador + elemento;
+        }, 0);
+        //muestro el resultado
+        document.write(suma + "<br>");
+
+
+
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Funciones en JavaScript</h1>
+    <form action="javascript:sumar()">
+        <label for="n1">Número 1:</label>
+        <input type="number" id="n1" required>
+        <br>
+        <label for="n2">Número 2:</label>
+        <input type="number" id="n2" required>
+        <br>
+        <button type="submit">Sumar</button>
+    </form>
+    <br>
+    <div id="resultado" style="color: red;"></div>
+
+    <script>
+        // Función para calcular el área de un círculo
+        function areaCirculo(radio) {
+            return Math.PI * radio * radio;
+        }
+
+        // Función para calcular el área de un triángulo
+        function areaTriangulo(base, altura) {
+            return (base * altura) / 2;
+        }
+
+        // Función para calcular el área de un cuadrado
+        function areaCuadrado(lado) {
+            document.write("Área del cuadrado: " + (lado * lado) + "<br>");
+        }
+
+        // Función para calcular el área de un rectángulo
+        function areaRectangulo(base, altura) {
+            return base * altura;
+        }
+
+        //Suma de valores
+		//var n1 = parseInt(prompt("Ingrese n1: "));
+		//var n2 = parseInt(prompt("Ingrese n2: "));
+		
+		//Funcion sumar para trabajar con prompts
+        // Función para calcular la suma de dos valores
+        /*
+        function sumar(n1, n2) {
+            return n1 + n2;
+        }
+        */
+
+        //Funcion sumar para trabajar con fomulario
+        // Función para calcular la suma de dos valores
+        function sumar() {
+            //var n1 = parseInt(document.getElementById("n1").value);
+            var n1 = parseInt(document.querySelector("#n1").value);
+
+            var n2 = parseInt(document.getElementById("n2").value);
+            
+            var resultado = n1 + n2;
+            
+            //document.getElementById("resultado").innerText = "Resultado: " + resultado;
+            document.getElementById("resultado").innerHTML = "Resultado: " + resultado;
+        }
+
+
+
+        // Ejemplo de uso
+       var ac = areaCirculo(5);
+       document.write("Área del círculo: " + ac + "<br>");
+
+
+        console.log("Área del triángulo:", areaTriangulo(4, 6));
+
+
+        areaCuadrado(3);
+        
+        
+        var ar = areaRectangulo(4, 5);
+        document.write("Área del rectángulo: " + ar + "<br>");
+
+
+		console.log("Suma:", sumar(4, 5));
+    </script>
+</body>
+</html>

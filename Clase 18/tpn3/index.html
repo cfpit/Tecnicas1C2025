@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //Ejercicio 3: Crear un arreglo donde le indiques el tamaño por teclado y crear una función que rellene el arreglo o arreglo con los múltiplos de un número pedido por teclado. Por ejemplo, si defino un arreglo de tamaño 5 y elijo un 3 en la función, el arreglo contendrá 3, 6, 9, 12, 15. Mostrarlos por pantalla usando otra función distinta.
+
+        function crearArreglo(tamano, multiplo) {
+            let arreglo = [];
+            for (let i = 1; i <= tamano; i++) {
+                arreglo.push(i * multiplo);
+            }
+            return arreglo;
+        }
+
+        function mostrarArreglo(arreglo) {
+            for (let i = 0; i < arreglo.length; i++) {
+                document.write(arreglo[i] + "<br>");
+            }
+        }
+
+        //ingreso de datos
+        let tamano = parseInt(prompt("Ingrese el tamaño del arreglo:"));
+        let multiplo = parseInt(prompt("Ingrese el número múltiplo:"));
+
+        //invoco las funciones previamente creadas
+        let arreglo = crearArreglo(tamano, multiplo);
+        mostrarArreglo(arreglo);
+
+
+
+
+    </script>    
+</body>
+</html>

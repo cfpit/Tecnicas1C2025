@@ -1,14 +1,39 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+
 <body>
+    <!-- <h3>Ejercicio 8</h3>
+
+    <form id="autoForm">
+        <label for="marca">Marca:</label>
+        <input type="text" id="marca" required><br><br>
+
+        <label for="modelo">Modelo:</label>
+        <input type="text" id="modelo" required><br><br>
+
+        <label for="año">Año:</label>
+        <input type="number" id="año" required><br><br>
+
+        <label for="color">Color:</label>
+        <input type="text" id="color" required><br><br>
+
+        <label for="kilometros">Kilómetros:</label>
+        <input type="number" id="kilometros" required><br><br>
+
+        <button type="button" onclick="mostrarDatos()">Enviar</button>
+    </form>
+
+    <div id="resultado"></div> -->
+
     <script>
         //Ejercicio 3: Crear un arreglo donde le indiques el tamaño por teclado y crear una función que rellene el arreglo o arreglo con los múltiplos de un número pedido por teclado. Por ejemplo, si defino un arreglo de tamaño 5 y elijo un 3 en la función, el arreglo contendrá 3, 6, 9, 12, 15. Mostrarlos por pantalla usando otra función distinta.
-
+        /*
         function crearArreglo(tamano, multiplo) {
             let arreglo = [];
             for (let i = 1; i <= tamano; i++) {
@@ -30,10 +55,146 @@
         //invoco las funciones previamente creadas
         let arreglo = crearArreglo(tamano, multiplo);
         mostrarArreglo(arreglo);
+        */
+
+        //Ejercicio 4
+        //Escribir un programa en Java para realizar la búsqueda del nombre de un cliente en un vector que contiene 5 clientes en total. El cliente a buscar será ingresado por pantalla por el usuario. El algoritmo deberá devolver, en caso de que ese nombre exista, la posición en donde se encuentra dicho cliente dentro del vector.
+        /*
+        function buscarCliente(clientes, nombre) {
+            for (let i = 0; i < clientes.length; i++) {
+                if (clientes[i].toLowerCase() === nombre.toLowerCase()) {
+                    return i; // Retorna la posición del cliente
+                }
+            }
+            return -1; // Retorna -1 si no se encuentra el cliente
+        }
+
+        // Definición del vector de clientes
+        let clientes = ["Juan", "Ana", "Pedro", "Maria", "Luis"];
+
+        // Ingreso del nombre del cliente a buscar
+        let nombreBuscado = prompt("Ingrese el nombre del cliente a buscar:");
+
+        // Llamada a la función de búsqueda
+        let posicion = buscarCliente(clientes, nombreBuscado);
+
+        // Verificación del resultado y mensaje al usuario
+        if (posicion !== -1) {
+            alert("El cliente " + nombreBuscado + " se encuentra en la posición: " + posicion);
+        } else {
+            alert("El cliente " + nombreBuscado + " no se encuentra en el vector.");
+        }
+       */
 
 
+        //Ejercicio 6
+        //Ingresar por teclado 5 nombres de personas y almacenarlas en un arreglo. Luego, informar cada nombre ingresado y la longitud en cantidad de caracteres de cada nombre
+        /*
+        function ingresarNombres() {
+            let nombres = [];
+            for (let i = 0; i < 5; i++) {
+                let nombre = prompt("Ingrese el nombre de la persona " + (i + 1) + ":");
+                nombres.push(nombre);
+            }
+            return nombres;
+        }
 
+        function mostrarNombresYLongitudes(nombres) {
+            for (let i = 0; i < nombres.length; i++) {
+                document.write("Nombre: " + nombres[i] + ", Longitud: " + nombres[i].length + " caracteres<br>");
+            }
+        }
 
-    </script>    
+        // Llamada a las funciones
+        let nombres = ingresarNombres();
+        mostrarNombresYLongitudes(nombres);
+        */
+
+        //Ejercicio 7: Ingresar por teclado nombres de colores hasta ingresar una cadena vacía. Luego recorrer el arreglo con for-in e informar los índices ingresados. Después, recorrer el arreglo con un for-of y mostrar el nombre de los colores ingresados.
+        /*
+        function ingresarColores() {
+            let colores = [];
+            let color;
+            do {
+                color = prompt("Ingrese un color (deje vacío para terminar):");
+                if (color !== "") {
+                    colores.push(color);
+                }
+                else {
+                    break;
+                }
+            } while (true);
+            return colores;
+        }
+
+        function mostrarColores(colores) {
+            document.write("Índices de los colores ingresados:<br>");
+            for (let i in colores) {
+                document.write("Índice " + i + "<br>");
+            }
+
+            document.write("<br>Colores ingresados:<br>");
+            for (let color of colores) {
+                document.write(color + "<br>");
+            }
+        }
+
+        // Llamada a las funciones
+        let colores = ingresarColores();
+        mostrarColores(colores);
+        */
+
+        //Objetos en Javascript
+        //Ejercicio 8: Ingresar los datos de un automóvil por formulario. Luego informar los datos para que se visualice como en el ejemplo:
+        /*
+        marca: "Toyota",
+        modelo: "Corolla",
+        año: 2020,
+        color: "Gris",
+        kilometros: 45000
+        */
+
+        //Además, se deberá mostrar un mensaje que informe si el automóvil es nuevo o usado. Se considera nuevo si su kilometraje es inferior a 10000 Km.
+        /*
+        function mostrarDatos() {
+            // Obtener los valores del formulario
+            const marca = document.getElementById("marca").value;
+            const modelo = document.getElementById("modelo").value;
+            const año = parseInt(document.getElementById("año").value);
+            const color = document.getElementById("color").value;
+            const kilometros = parseInt(document.getElementById("kilometros").value);
+
+            // Crear el objeto automóvil
+            const auto = {
+                marca: marca,
+                modelo: modelo,
+                año: año,
+                color: color,
+                kilometros: kilometros
+            };
+
+            // Mostrar los datos del automóvil
+            let resultado = `
+                <h4>Datos del Automóvil:</h4>
+                <p>Marca: ${auto.marca}</p>
+                <p>Modelo: ${auto.modelo}</p>
+                <p>Año: ${auto.año}</p>
+                <p>Color: ${auto.color}</p>
+                <p>Kilómetros: ${auto.kilometros}</p>
+            `;
+
+            // Verificar si el automóvil es nuevo o usado
+            if (auto.kilometros < 10000) {
+                resultado += "<p>El automóvil es nuevo.</p>";
+            } else {
+                resultado += "<p>El automóvil es usado.</p>";
+            }
+
+            // Mostrar el resultado en el div
+            document.getElementById("resultado").innerHTML = resultado;
+        }
+        */
+    </script>
 </body>
+
 </html>

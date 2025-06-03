@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- Ejercicio 1: crear una tabla de dos filas. Agregar el codigo necesario para que al pasar el cursor por encima de alguna fila, esta se ilumine de color azul. Cuando se deje de pasar el cursor, debe volver al estado original. -->
+
+    <!-- this es el tr que esta en la misma etiqueta o linea  -->
+    <table border="1" style="width: 50%; margin: auto;">
+        <tr onmouseover="iluminar(this)" onmouseout="apagar(this)">
+            <td>Celda 1</td>
+            <td>Celda 2</td>
+            <td>Celda 3</td>
+            <td>Celda 4</td>
+        </tr>
+        <tr onmouseover="iluminar(this)" onmouseout="apagar(this)">
+            <td>Celda 5</td>
+            <td>Celda 6</td>
+            <td>Celda 7</td>
+            <td>Celda 8</td>
+        </tr>
+    </table>
+
+    <script>
+        // javascript recibe el tr que se pasa como this desde el HTML
+        // y lo guarda en la variable fila como parametro de las funciones
+        // luego cambia el color de fondo al pasar el mouse por encima o retirarlo
+        function iluminar(fila) {
+            fila.style.backgroundColor = 'blue';
+        }
+
+        function apagar(fila) {
+            fila.style.backgroundColor = '';
+        }
+    </script>
+</body>
+</html>

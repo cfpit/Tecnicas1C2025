@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- Ejercicio 5: Desarrollar una aplicación que al hacer clic sobre la expresión “Mostrar Div”, aparezca un texto. Luego, al hacer clic sobre sobre la expresión “Ocultar Div”, oculte el texto previamente visualizado. -->
+
+    <!-- href indica el destino del enlace
+     si href="javascript:void(0)" es un enlace a la misma
+     pagina web donde se encuentra el enlace -->
+    <h2>Ejercicio 5</h2>
+    <a href="javascript:void(0)" onclick="mostrar()">Mostrar Div</a>
+    <br>
+    <a href="javascript:void(0)" onclick="ocultar()">Ocultar Div</a>
+    <br>
+    <div id="texto" style="display: none;">
+        Este es el texto que se muestra y oculta.
+    </div>
+
+    <script>
+        function mostrar() {
+            document.getElementById("texto").style.display = "block";
+        }
+
+        function ocultar() {
+            document.getElementById("texto").style.display = "none";
+        }
+    </script>
+</body>
+</html>

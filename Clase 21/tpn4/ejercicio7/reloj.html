@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body onload="mostrarHora()">
+    <h1>Reloj Digital</h1>
+    <div id="reloj"></div>
+
+    <script>
+        function mostrarHora() {
+            // Obtenemos la fecha actual
+            const fecha = new Date();
+            
+            // Formateamos la hora, minutos y segundos
+            // Aseguramos que siempre tengan dos dígitos
+            const horas = String(fecha.getHours()).padStart(2, '0');
+            const minutos = String(fecha.getMinutes()).padStart(2, '0');
+            const segundos = String(fecha.getSeconds()).padStart(2, '0');
+            
+            // Mostramos la hora en el div con id "reloj"
+            // Usamos template literals para formatear la cadena
+            document.getElementById("reloj").textContent = `${horas}:${minutos}:${segundos}`;
+        }
+
+        setInterval(mostrarHora, 1000);
+    </script>
+    
+</body>
+</html>

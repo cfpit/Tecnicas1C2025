@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <a href="#" onmouseover="mostrar('pest1')">Pestaña 1</a>
+    <br>    
+    <a href="#" onmouseover="mostrar('pest2')">Pestaña 2</a>
+    <br>    
+    <a href="#" onmouseover="mostrar('pest3')">Pestaña 3</a>
+    
+    <br>
+    
+    <div id="pest1" style="display: none;">
+        <img src="imagenes/perro1.jpg">
+    </div>
+    <div id="pest2" style="display: none;">
+        <img src="imagenes/perro2.jpg">
+    </div>
+    <div id="pest3" style="display: none;">
+        <img src="imagenes/perro3.jpg">
+    </div>
+    <script>
+        function mostrar(id) {
+            // Ocultar todas las pestañas
+            document.getElementById('pest1').style.display = 'none';
+            document.getElementById('pest2').style.display = 'none';
+            document.getElementById('pest3').style.display = 'none';
+            
+            // Mostrar la pestaña seleccionada
+            document.getElementById(id).style.display = 'block';
+        }
+    </script>
+</body>
+</html>

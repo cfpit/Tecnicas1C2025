@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        table {
+            /*width: 800px;*/
+            /*width: 50%;*/
+            width: 40vw;/*40% del ancho del viewport(pantalla)*/         
+            border-collapse: collapse;
+            border-color: red;
+            border-width: 0.25rem;/* 0.25rem = 4px */
+            margin: auto;/*centrado*/
+        }
+    </style>
+</head>
+<body>
+    <table border="1">
+        <tr onmouseover="iluminar(this)" onmouseout="apagar(this)">
+            <td onclick="pintar(this)">Celda 1</td>
+            <td onclick="pintar(this)">Celda 2</td>
+            <td onclick="pintar(this)">Celda 3</td>
+            <td onclick="pintar(this)">Celda 4</td>
+        </tr>
+        <tr onmouseover="iluminar(this)" onmouseout="apagar(this)">
+            <td>Celda 5</td>
+            <td>Celda 6</td>
+            <td>Celda 7</td>
+            <td>Celda 8</td>
+        </tr>
+    </table>
+    <script src="tabla-iluminar.js"></script>
+</body>
+</html>

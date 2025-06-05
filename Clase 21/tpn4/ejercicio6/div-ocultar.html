@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        p {
+            color: red;
+            font-size: 1.5rem;
+            font-weight: bold;
+            font-family: Impact serif;
+            margin-top: 1rem;
+        }
+
+        a {
+            color: blue;
+            font-size: 1.2rem;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <a href="#" id="enlace" onclick="alternar()">Mostrar Texto</a>
+    <br>
+    <div id="caja" style="display: none;">
+        <p>Texto Fantasma!</p>
+    </div>
+    <script>
+        function alternar() {
+            const caja = document.getElementById("caja");
+            const enlace = document.getElementById("enlace");
+
+            //si el div esta oculto...
+            if (caja.style.display === "none") {
+                //...lo mostramos
+                caja.style.display = "block";
+                //cambiamos el texto del enlace
+                enlace.textContent = "Ocultar Texto";
+            } else {
+                //si el div esta visible...
+                //...lo ocultamos
+                caja.style.display = "none";
+                //cambiamos el texto del enlace
+                enlace.textContent = "Mostrar Texto";
+            }
+        }
+        
+    </script>
+</body>
+</html>

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            margin: auto;/* centra el body */
+            width: 80%;
+            font-family: 'Trebuchet MS';
+            text-align: center;
+        }
+        .header {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px;
+            height: 15vh;
+            line-height: 15vh; /* Centra el texto verticalmente */
+            font-size: 2em; /* Tamaño de fuente grande */
+            
+        }
+        .nav {
+            margin-top: 3rem;/* Espacio entre el header y la barra de navegación */
+            background-color: #333;
+            color: white;
+            padding: 10px 0;
+            height: 10vh;
+            line-height: 10vh;
+            font-size: 1.5em; /* Tamaño de fuente mediano */ 
+        }
+        
+        .main {
+            background-color: bisque;
+            height: 50vh; /* Altura de la sección principal */
+            line-height: 50vh; /* Altura de la sección principal */; 
+        }
+
+        .seccion1 {
+            width: 75%;
+            background-color: lightblue;
+            float: left; /* Permite que las secciones se alineen horizontalmente */
+            height: 100%;
+        }
+        
+        .seccion2 {
+            width: 25%;
+            background-color: cadetblue;
+            color: white;
+            float: left; 
+            height: 100%;
+        }
+
+        .seccion1, .seccion2 {
+            font-size: 1.5rem; /* Tamaño de fuente grande para las secciones */
+            box-sizing: border-box; /* Incluye el padding en el ancho total */
+        }
+
+        .footer {
+            background-color:brown ;
+            color: white;
+            height: 15vh;
+            line-height: 15vh; 
+            font-size: 1em; /* Tamaño de fuente pequeño */
+            clear: both; /* Asegura que el pie de página esté debajo de las secciones */
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="header">Encabezado</div>
+    <div class="nav">Barra de Navegacion</div>
+    <div class="main">
+        <div class="seccion1">Seccion 1</div>
+        <div class="seccion2">Seccion 2</div>
+    </div>
+    <div class="footer">Pie de Pagina</div>
+</body>
+</html>

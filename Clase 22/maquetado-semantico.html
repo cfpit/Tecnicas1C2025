@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            margin: auto; /* centra el body */
+            width: 80%;
+            font-family: 'Trebuchet MS';
+            text-align: center;
+        }
+        header {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px;
+            height: 20vh;
+            line-height: 5vh; /* Centra el texto verticalmente */
+            font-size: 1em; /* Tamaño de fuente grande */
+        }
+        nav {
+            margin-top: 0; /* Espacio entre el header y la barra de navegación */
+            background-color: #333;
+            color: white;
+            padding: 10px 0;
+            height: 10vh;
+            line-height: 10vh;
+            font-size: 1.5em; /* Tamaño de fuente mediano */ 
+        }
+        main {
+        background-color: bisque;
+        height: 50vh; /* Altura de la sección principal */
+        /* Elimina line-height para evitar centrar verticalmente todo el contenido */
+        display: flex;
+        /* Flexbox para organizar las secciones */
+
+        /*La propiedad display: flex convierte un elemento en un contenedor flexbox. Esto permite organizar y alinear fácilmente los elementos hijos (por ejemplo, secciones o artículos) en filas o columnas, y controlar su tamaño, posición y espacio entre ellos.*/ 
+
+        /*justify-content: center; centra el contenido en el eje principal del contenedor flex.
+        Si flex-direction: row (por defecto), centra horizontalmente.
+        Si flex-direction: column, centra verticalmente.
+        En el código, por ejemplo, en .seccion1 y .seccion2:
+
+        .seccion1 (por defecto es fila): centra horizontalmente.
+        .seccion2 (flex-direction: column): centra verticalmente.*/
+
+        
+        /*align-items: center; centra el contenido en el eje secundario del contenedor flex.
+        - Si flex-direction: row (por defecto), centra verticalmente.
+        - Si flex-direction: column, centra horizontalmente.
+
+        En .seccion1 (que es fila por defecto), centra el contenido verticalmente dentro de la sección.*/
+        
+
+    }
+    footer {
+        background-color:brown ;
+        color:white ;
+        padding: 10px;
+        height: 15vh;
+        line-height: 15vh; /* Centra el texto verticalmente */
+    }
+    .seccion1 {
+        width: 60%; /* Ocupa el 60% del ancho de main */
+        background-color: lightblue;
+        display: flex; /* Flexbox para centrar el contenido */
+        align-items: center; /* Centra verticalmente el contenido */
+        justify-content: center; /* Centra horizontalmente el contenido */
+    }
+    .seccion2 {
+        width: 40%; /* Ocupa el 40% del ancho de main */
+        background-color: cadetblue;
+        color: white;
+        display: flex; 
+        flex-direction: column; /* Apila el contenido en columna */
+        justify-content: center; /* Centra verticalmente el contenido */
+    }
+    .seccion1, .seccion2 {
+        font-size: 1.5rem; /* Tamaño de fuente grande para las secciones */
+        box-sizing: border-box; /* Incluye el padding y en el ancho total */
+    }
+
+    figure {
+        margin: 0;
+    }
+
+    img {
+        max-width: 90%; /* Imagen nunca supera el 90% del ancho del contenedor */
+    }
+
+    figcaption {
+        font-size: 0.8em; /* Tamaño de fuente más pequeño para el epigrafe */
+        color: #eee; /* Mejor contraste sobre cadetblue */
+        margin-top: 0.5em; /* Espacio arriba del epígrafe */
+    }
+    </style>
+</head>
+<body>
+    <header>
+        <hgroup>
+            <h1>Titulo Principal</h1>
+            <h2>Titulo Secundario</h2>
+        </hgroup>
+    </header>
+    <nav>Barra de Navegacion</nav>
+    <main>
+        <section class="seccion1">
+            <article>Seccion 1 - Articulo 1</article>
+        </section>
+        <section class="seccion2">
+            <article>
+                <figure>
+                    <img src="paisaje.jpg" alt="Imagen de ejemplo">
+                    <figcaption>Figura 1: Imagen de ejemplo</figcaption>
+                </figure>
+            </article>
+        </section>
+    </main>
+    <footer>Pie de Pagina</footer>
+</body>
+</html>

@@ -1,0 +1,48 @@
+POO
+	--> Todo es un objeto
+	--> Todo objeto pertenece a una clase
+	--> Una clase representa una entidad o realiza una funcion
+					--> Persona, Auto, Producto, Cliente, ConexionABaseDeDatos, LecturaArchivo, LectorDeApi
+	--> Toda clase posee atributos y metodos
+	-> atributos: son las caracteristicas q comparten todos los objetos de una misma clase
+	-> metodos: son las acciones q comparten todos los objetos de una misma clase
+
+	--> clase Persona
+		--> atributos: nombre, apellido, telefono, dni, edad
+		--> metodos: comer, caminar, dormir
+
+	--> clase Auto
+		--> atributos: marca, modelo, color, precio, cantidadDePuertas, velocidad
+		--> metodos: arrancar, acelerar, frenar, chocar
+
+		Las clases con metodo main se llaman ejecutables
+
+	"El estado de un objeto se deberia modificar a traves del comportamiento".
+
+	traduccion de lo anterior:
+	El valor de los atributos de un objeto se deberia modificar a traves de algun metodo
+	El estado de un objeto deberia cambiar a traves del comportamiento
+	Ej.: la edad de una persona deberia cambiar mediante el metodo cumplirAños
+	La velocidad de un auto deberia cambiar mediante los metodos acelerar y frenar
+	El saldo de una cuenta bancaria deberia cambiar a traves de los metodos extraer y depositar	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

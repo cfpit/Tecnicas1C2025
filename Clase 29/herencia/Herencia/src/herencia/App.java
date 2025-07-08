@@ -1,17 +1,19 @@
-package herencia;
 public class App {
     public static void main(String[] args) throws Exception {
-        //crear un vehiculo
-        Vehiculo vehiculo = new Vehiculo(120);
-        
-        // Crear un objeto de la clase Avion
-        Avion avion = new Avion(600, "Vuelo 123", 180);
-        
-        //imprimir el objeto Vehiculo
-        System.out.println(vehiculo);
-        
-        // Imprimir el objeto Avion
-        System.out.println(avion);
-        
+        //creo un objeto de la clase Avion
+        Avion a = new Avion("ABC-123", 0);
+        Bici b = new Bici(0, "26 pulgadas");
+
+        //comportamiento de los objetos
+        a.despegar();
+        a.volar();
+        // a.aterrizar();
+
+        b.pedalear();
+
+        //imprimo el estado de los objetos
+        System.out.println("Avion: "+a);
+        System.out.println("---------------");
+        System.out.println("Bicicleta: "+b);
     }
 }
